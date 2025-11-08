@@ -1,0 +1,13 @@
+<button
+  type="button"
+  class="btn"
+  [disabled]="disabled()"
+  [class.btn__accent]="theme() === 'accent'"
+  [class.btn__primary]="theme() === 'primary'"
+  [class.btn__mobile]="size() === 'small'"
+  [class.icon-btn]="iconStart() || iconEnd()"
+>
+  <span class="btn__text">
+    <ng-content/>
+  </span>
+</button>

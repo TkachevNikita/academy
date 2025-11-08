@@ -1,0 +1,21 @@
+.main-page {
+  &__hero {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: calc(100vh - 91px);
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    &-title {
+      font-size: clamp(24px, 15vw, 40px);
+      font-weight: 600;
+      line-height: 100%;
+    }
+  }
+}

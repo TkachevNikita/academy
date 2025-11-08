@@ -1,0 +1,27 @@
+<div
+  class="dropdown"
+  (mouseenter)="isOpen.set(true)"
+  (mouseleave)="isOpen.set(false)"
+>
+  <button class="dropdown__trigger">
+    {{ label() }}
+
+    @if (items().length > 0) {
+      <div class="dropdown__arrow" [class.dropdown__arrow-open]="isOpen()">
+        <app-icon>
+          keyboard_arrow_down
+        </app-icon>
+      </div>
+    }
+  </button>
+  <div class="dropdown__content" [class.dropdown__content--open]="isOpen()">
+    @for (item of items(); track item) {
+      <a
+        [href]="item.link"
+        class="dropdown__item"
+      >
+        {{ item.label }}
+      </a>
+    }
+  </div>
+</div>
