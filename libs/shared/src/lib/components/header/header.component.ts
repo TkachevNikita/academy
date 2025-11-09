@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ButtonComponent } from '../button/button.component';
-import { DropdownMenuComponent } from '../dropdown-menu/dropdown-menu.component';
+import { DropdownMenuComponent } from '../UI/dropdown-menu/dropdown-menu.component';
+import { ButtonComponent } from '../UI/button/button.component';
 
 @Component({
   selector: 'app-header',

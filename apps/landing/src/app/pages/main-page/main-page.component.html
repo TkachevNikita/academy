@@ -8,11 +8,55 @@
     <div class="main-page__hero-content">
       <img src="main-logo.png" alt="Логотип" class="main-page__hero-logo">
       <h1 class="main-page__hero-title">
-        Повышение квалификации и профессиональная переподготовка в области ит
+        Повышение квалификации и профессиональная переподготовка в области IT
       </h1>
       <app-button>
         Оставить заявку
       </app-button>
+    </div>
+
+    <button (click)="scrollToAbout()" class="main-page__hero-scroll">
+      <app-icon>keyboard_arrow_down</app-icon>
+    </button>
+  </section>
+  <section #about class="main-page__about">
+    <h2 class="section-title">
+      Почему выбирают нас?
+    </h2>
+    <div class="main-page__about-list">
+      <div class="main-page__about-card">
+        <img class="main-page__about-card-icon" src="laptop.svg" alt="">
+        <div class="main-page__about-card-description">
+          <h3 class="main-page__about-card-title">
+            Занимайтесь из любой точки мира
+          </h3>
+          <p class="main-page__about-card-text">
+            Обучение на платформе дистанционного обучения. Вы изучаете материал, выполняете практические кейсы и получаете обратную связь от преподавателей
+          </p>
+        </div>
+      </div>
+      <div class="main-page__about-card">
+        <img class="main-page__about-card-icon" src="study.svg" alt="">
+        <div class="main-page__about-card-description">
+          <h3 class="main-page__about-card-title">
+            Диплом по окончании обучения
+          </h3>
+          <p class="main-page__about-card-text">
+            Лицензированное обучение с гарантией результата — получите диплом о профессиональной переподготовке или удостоверение о повышении квалификации государственного образца, ценимое работодателями
+          </p>
+        </div>
+      </div>
+      <div class="main-page__about-card">
+        <img class="main-page__about-card-icon" src="human.svg" alt="">
+        <div class="main-page__about-card-description">
+          <h3 class="main-page__about-card-title">
+            Преподаватели-практики из IT-индустрии
+          </h3>
+          <p class="main-page__about-card-text">
+            В разработке учебных курсов и проведении вебинаров участвуют специалисты, имеющие высокую квалификацию и большой опыт работы в сфере ИТ
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </app-main-layout>

@@ -25,3 +25,21 @@ a {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.overlay-backdrop {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.cdk-global-overlay-wrapper {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+
+@media (max-width: 600px) {
+  .cdk-global-overlay-wrapper {
+    justify-content: center !important;
+    align-items: flex-end !important;
+  }
+}

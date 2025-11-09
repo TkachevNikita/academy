@@ -1,0 +1,18 @@
+<div
+  animate.enter="enter"
+  animate.done="leave"
+  class="dialog-container"
+>
+  <button
+    class="dialog-container__action"
+    (click)="close()"
+  >
+    <app-icon>close</app-icon>
+  </button>
+  <h3 class="dialog-container__title">
+    {{ title() }}
+  </h3>
+  <div class="dialog-container__content">
+    <ng-template #content></ng-template>
+  </div>
+</div>
