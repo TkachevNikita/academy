@@ -1,0 +1,66 @@
+@use 'styles/constants.scss' as constants;
+
+.dialog-container {
+  max-width: 600px;
+  padding: 30px;
+  color: constants.$primary-blue;
+  border-radius: 14px;
+  min-width: 340px;
+  background: constants.$white;
+
+  &__action {
+    border: none;
+    background: transparent;
+    color: constants.$dark-blue;
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+  }
+
+  &__title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__content {
+    margin-top: 30px;
+  }
+
+  @media (max-width: 599px) {
+    width: 100vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.enter {
+  animation: enter 0.2s ease-in-out;
+}
+
+.leave {
+  animation: leave 0.2s ease-in-out;
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes leave {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(30px) scale(0.98);
+  }
+}

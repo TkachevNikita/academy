@@ -1,0 +1,33 @@
+<header class="header">
+  <div class="header__container container">
+    <a href="#" class="header__logo">
+      <img src="logo.svg" class="header__logo-img" alt="logo">
+    </a>
+    <nav class="header__nav">
+      <app-dropdown-menu
+        label="Курсы"
+      />
+      <app-dropdown-menu
+        label="Профессии"
+      />
+      <app-dropdown-menu
+        label="Детям"
+      />
+      <app-dropdown-menu
+        label="Лаборатория IT"
+      />
+      <app-dropdown-menu
+        label="О нас"
+        [items]="aboutItems"
+      />
+    </nav>
+    <div class="header__contacts">
+      <app-button>
+        Оставить заявку
+      </app-button>
+      <a href="tel:+79582319934" class="header__phone">
+        +7 958 2319934
+      </a>
+    </div>
+  </div>
+</header>

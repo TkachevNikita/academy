@@ -1,0 +1,20 @@
+$light-blue: #3B97D9;
+$primary-blue: #0F5CB3;
+$dark-blue: #07458B;
+
+$white: #ffffff;
+$dark: #000000;
+
+$light-gray: #D9D9D9;
+$gray: #C0C0C0;
+$dark-gray: #938F8F;
+
+$mobile-width: 600px;
+
+@mixin icon-desktop {
+  font-size: 32px;
+}
+
+@mixin icon-mobile {
+  font-size: 20px;
+}

@@ -1,0 +1,19 @@
+<label class="input">
+  @if (iconStart()) {
+    <app-icon class="input__icon-start">
+      {{ iconStart() }}
+    </app-icon>
+  }
+  <input
+    [type]="type()"
+    class="input__field"
+    [placeholder]="placeholder()"
+    (input)="onInput($event)"
+    [value]="value"
+  >
+  @if (iconEnd()) {
+    <app-icon class="input__icon-end">
+      {{ iconEnd() }
+    </app-icon>
+  }
+</label>

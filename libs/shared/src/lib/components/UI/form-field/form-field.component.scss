@@ -1,0 +1,16 @@
+@use 'styles/constants.scss' as consts;
+
+:host {
+  width: 100%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &__label {
+    color: consts.$gray;
+    font-size: 16px;
+  }
+}

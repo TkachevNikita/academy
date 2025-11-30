@@ -1,0 +1,32 @@
+@use 'styles/constants.scss' as consts;
+
+.header {
+  background-color: consts.$primary-blue;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  &__link,
+  &__phone {
+    font-weight: 400;
+    font-size: clamp(14px, 3vw, 24px);
+    color: consts.$white;
+    text-transform: uppercase;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 40px;
+    margin-left: 40px;
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-left: auto;
+  }
+}

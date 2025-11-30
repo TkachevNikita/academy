@@ -1,0 +1,29 @@
+<form [formGroup]="form" class="request-form">
+  <app-form-field label="Фамилия и имя">
+    <app-input formControlName="name" placeholder="Введите фамилию и имя"/>
+  </app-form-field>
+  <app-form-field label="Номер телефона">
+    <app-input formControlName="phone" placeholder="Введите номер телефона"/>
+  </app-form-field>
+  <app-form-field label="Email">
+    <app-input formControlName="email" placeholder="Введите Email"/>
+  </app-form-field>
+  <app-form-field label="Чему Вы хотите обучиться?">
+    <app-input formControlName="about" placeholder="Введите сферу обучения "/>
+  </app-form-field>
+  <app-form-field label="Какой профессии Вы хотите обучиться?">
+    <app-select formControlName="profession" placeholder="Выберите из списка" [multiple]="false">
+      <app-option label="Frontend-разработчик" [value]="1"/>
+      <app-option label="Системный аналитик" [value]="2"/>
+    </app-select>
+  </app-form-field>
+  <app-form-field label="Какое повышение квалификации Вы рассматриваете?">
+    <app-select formControlName="qualification" placeholder="Выберите из списка">
+      <app-option label="Доп. образование" value="3"/>
+    </app-select>
+  </app-form-field>
+  <app-checkbox formControlName="agreement">
+    Я согласен (-на) на обработку персональных данныъ
+  </app-checkbox>
+  <app-button class="request-form__submit">Отправить</app-button>
+</form>

@@ -1,0 +1,18 @@
+<div class="main-layout">
+  <app-header/>
+  <div class="main-layout__content container">
+    <ng-content/>
+  </div>
+  <div class="main-layout__actions">
+    <div class="main-layout__actions-item" (click)="openForm('phone')">
+      <app-icon>
+        phone_enabled
+      </app-icon>
+    </div>
+    <div class="main-layout__actions-item" (click)="openForm('message')">
+      <app-icon>
+        mail
+      </app-icon>
+    </div>
+  </div>
+</div>
