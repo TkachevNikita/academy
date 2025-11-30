@@ -29,4 +29,9 @@
     align-items: center;
     margin-left: auto;
   }
+
+  &__text {
+    margin-left: 40px;
+    color: consts.$white;
+  }
 }

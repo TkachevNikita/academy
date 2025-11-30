@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { DropdownMenuComponent } from '../UI/dropdown-menu/dropdown-menu.component';
 import { ButtonComponent } from '../UI/button/button.component';
 
@@ -10,6 +10,8 @@ import { ButtonComponent } from '../UI/button/button.component';
   imports: [ButtonComponent, DropdownMenuComponent],
 })
 export class HeaderComponent {
+  public isAdminMode = input(false);
+
   public aboutItems = [
     { label: 'О компании', link: '/about' },
     { label: 'Преподавательский состав', link: '/design' },

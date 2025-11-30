@@ -1,0 +1,15 @@
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__content {
+    padding: 30px;
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    gap: 30px;
+  }
+}

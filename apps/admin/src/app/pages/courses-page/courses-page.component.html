@@ -1,0 +1,34 @@
+<div class="courses-page">
+  <h2 class="courses-page__title">
+    Курсы
+  </h2>
+  <div class="courses-page__text" (dblclick)="toggleText()">
+    @if (textEditable()) {
+      <div class="courses-page__text-edit">
+        <app-textarea class="courses-page__text-control" [formControl]="textControl"/>
+        <app-button (click)="updateText()">Сохранить</app-button>
+      </div>
+    } @else {
+      {{ textValue() }}
+    }
+  </div>
+  <app-button class="courses-page__add">
+    Создать курс
+  </app-button>
+  <div class="courses-page__list">
+    @for (course of courses; track course.id) {
+      <app-courses-card [course]="course">
+        <svg icon width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect width="84" height="84" fill="url(#pattern0_370_636)"/>
+          <defs>
+            <pattern id="pattern0_370_636" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_370_636" transform="scale(0.01)"/>
+            </pattern>
+            <image id="image0_370_636" width="100" height="100" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFT0lEQVR4nO2dS4gcVRRAa0YRFPGHG0X8TL/bo6OuFAn4adG6t0cTFIXxsxOiCxHd+FmI+ObeGjR+AkaIQXdGFB2Xgh/E4EYRA4LRuAlxI+oEFfygRI0Zed2TZDLTXVOf112veu6BuwlTr6ruqVfV79WtlyhSFEVRFEVRFEVRFEVRFEUZJFNkz2rGci+QbAeSeQ3JEtsNzm4+f+PTZ3qVAcgPAcpvQLKoIQWCf21i8oAXGYZka/UnJCMRhvjZsj3jtqpPAkYsGrHcUlwIyVdVnwCMWBiULwvJmIgFqj54GNEw00kjf++I5eaqDxxGNBqUTOcWYpBnqj5wGNFwuVUhFE6oEFoHQgzxP4Cyw41EDYkFlO8yHQzxR92BZmewuSvLwZs6Rsr4zbsQJ6OJfPXyv7+gZc8wxHvSkyvPRdHi2LGtFscM8vNp20Q1JTV/3nsIyo6e2xBj/+TywtSMPWnlNu7fgOSACinV4OzmXttMxFtOT7na3++3LyD+QIWUumWJ7bXNBNrLUnrV3r77Iv5GhZQT8n2vKWVA2Zn6kG7zxlX7IdmkzxA/v7L2QDuJzbQ9rdGWSw3yq6kyugfyu5uGnoztuS6AkgcNyR8qJAM6DpGBhQqhsEKFUFihQiisUCEUVqgQCitUCIUVKoTCChVCYYUKobBiALO9BRpcZ5jhTr+rkLVQIYGhQgJDhQSGCgkMFTIA3FtRwOS6RptvBZq7qtWyJ2bdVoV4pEHWAPHbndqz485bfnH1BOdt2HryWm2oEE80MbnBffGUOrAj3t1s2bPT2lEhHnCfCawl42ig7Dq+6G9FWyqkPAblzUwylqLRljv6t6VCSuGqZwzJv3mEGJJ3+7anQsrRaCfX55GxFAdGRkin7BTlHkOyDZBfd0XXDfdlkbXjUQUAyl25hSAfHAkhhpL7+373jvz1ZDx3ZTQsZuZPAJKHgfivvEIM8be1F2KIn1r7ypM/TcytaMBMtmUSkD8pcKtayoO8UmshTeSbst8O5Ef3zUkUWK9Y1pMPuRLaWgsB4i9ynXTMj0cD6RXyaWERx25XT6btJ3ghk217Yf6rUPa67SJvvYIfKdUrlnpGV0b/QWEthLhK+cJXI8rngPJoUTm5ewXKPleZD8jvGOQf3K8p9wB3z4y029Qg8+e9QYMJlb1NQD851o43afZOQH7PEP9sUP42JPsB+aXOB6lZewXKf0D8wjmb7Cm5E1a7W1Ysl/sQAivkGOTHOl/2lm3P9Yo2X5s7UUPKn9cGl77Q3e1bCHgJPmxIXp5q2VNzJ2lI+fPaYMgyDMl+N2WSOzlDzJ/XBsOVwQPpFb7z57VBt0Zj7nEHddeTclMn7n5ukF90H5h6lYGyrxkn1xRN9LDy57XBzDJQdnaXoODXgOQZt/DAqslFa8e9yUE+6OMXVGBCeAFutBNlZXSX2ciJLS2n73R5TYXwAsRySSUyej6f8r1QcgO9aHSE8IKZtlMhyDiCqwzJJaQtt0ejISQ8GUeLEjKuJ2yQPxzmy68BCglTxvKyHbdCROq+ST5bq2ynJkLClnGEJiYXdZb2Rj60QsRPgPxElsK28IXE3KqDjJXv6d1xu9LPBskVbso9qoihFolkHYG7MUa0TjHDEqIyAhKiMgISojICEqIyAhKiMgIS4ksG0Ox93ffV6e3AOomCQhbHgOTjsuOMTtko8eGqkwB1F+JWrlYZEo4QiGfvVhkSjpAm2Yv7JVRlyPCFdBMr21Y1iLxFZUg1QhyuItCQvOEWSnbV66kypu0UIL8VwH/oOB9ymHhuQ2EhiqIoiqIoiqIoiqIoiqIoUQ/+B0DeVivoeI80AAAAAElFTkSuQmCC"/>
+          </defs>
+        </svg>
+
+      </app-courses-card>
+    }
+  </div>
+</div>

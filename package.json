@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:landing": "nx serve landing"
+    "start:landing": "nx serve landing",
+    "start:admin": "nx serve admin"
   },
   "private": true,
   "dependencies": {

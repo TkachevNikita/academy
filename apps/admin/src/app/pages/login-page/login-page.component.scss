@@ -1,0 +1,40 @@
+@use 'styles/constants.scss' as consts;
+
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 40px;
+    border-radius: 32px;
+    box-shadow: 0 0 38px -9px rgba(34, 60, 80, 0.33);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__title {
+    color: consts.$dark-blue;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+  }
+
+  &__logo {
+    align-self: center;
+    background: consts.$dark-blue;
+    width: fit-content;
+    display: flex;
+    padding: 15px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+  }
+}

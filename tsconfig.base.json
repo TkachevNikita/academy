@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@academy/shared": ["libs/shared/src/index.ts"]
+      "@academy/shared": ["libs/shared/src/index.ts"],
+      "@academy/courses": ["libs/courses/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

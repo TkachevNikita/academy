@@ -23,7 +23,7 @@ import { IconComponent } from '../icon/icon.component';
 })
 export class InputComponent implements ControlValueAccessor {
   public placeholder = input('');
-  public type = input<'text' | 'number'>('text');
+  public type = input<'text' | 'number' | 'password'>('text');
   public iconStart = input('');
   public iconEnd = input('');
 

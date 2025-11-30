@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <div class="sidebar__list">
+    @for (item of items; track item) {
+      <a
+        class="sidebar__item"
+        routerLinkActive="sidebar__item-active"
+        [routerLink]="item.link"
+      >
+        <app-icon class="sidebar__icon">
+          {{ item.icon }}
+        </app-icon>
+        <span class="sidebar__text">
+          {{ item.label }}
+        </span>
+      </a>
+    }
+  </div>
+</div>

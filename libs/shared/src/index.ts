@@ -8,3 +8,4 @@ export * from './lib/components/UI/checkbox/checkbox.component';
 export * from './lib/components/UI/select/select.component';
 export * from './lib/components/UI/select/option/option.component';
 export * from './lib/components/UI/form-field/form-field.component';
+export * from './lib/components/UI/sidebar/sidebar.component';

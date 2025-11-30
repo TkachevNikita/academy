@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.overlay-backdrop {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.cdk-global-overlay-wrapper {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+
+@media (max-width: 600px) {
+  .cdk-global-overlay-wrapper {
+    justify-content: center !important;
+    align-items: flex-end !important;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="course-card">
+  <div class="course-card__header">
+    <div class="course-card__icon">
+      <ng-content select="[icon]"></ng-content>
+    </div>
+  </div>
+
+  <div class="course-card__body">
+    <h3 class="course-card__title">{{ course().title }}</h3>
+    <p class="course-card__description">{{ course().description }}</p>
+  </div>
+</div>
