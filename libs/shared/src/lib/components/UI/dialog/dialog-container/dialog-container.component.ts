@@ -27,11 +27,12 @@ export class DialogContainerComponent implements OnInit {
   public content!: ViewContainerRef;
 
   public title = signal('');
+  public width = signal('');
 
   public ngOnInit(): void {
-    const dialogData = this.dialogData as { title: string };
-    console.log(dialogData);
+    const dialogData = this.dialogData as { title: string; width: string };
     this.title.set(dialogData?.title || '');
+    this.width.set(dialogData?.width || 'initial');
   }
 
   public load<T>(component: ComponentType<T>): void {

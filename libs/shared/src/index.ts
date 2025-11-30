@@ -4,3 +4,7 @@ export * from './lib/components/UI/icon/icon.component';
 export * from './lib/components/UI/dialog/dialog.service';
 export * from './lib/components/UI/input/input.component';
 export * from './lib/components/UI/textarea/textarea.component';
+export * from './lib/components/UI/checkbox/checkbox.component';
+export * from './lib/components/UI/select/select.component';
+export * from './lib/components/UI/select/option/option.component';
+export * from './lib/components/UI/form-field/form-field.component';

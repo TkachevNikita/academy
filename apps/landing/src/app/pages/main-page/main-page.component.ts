@@ -2,10 +2,12 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
+  inject,
   ViewChild,
 } from '@angular/core';
 import { MainLayoutComponent } from '../../components/main-layout/main-layout.component';
-import { ButtonComponent, IconComponent } from '@academy/shared';
+import { ButtonComponent, DialogService, IconComponent } from '@academy/shared';
+import { RequestFormComponent } from '../../components/request-form/request-form.component';
 
 @Component({
   templateUrl: './main-page.component.html',
@@ -14,6 +16,8 @@ import { ButtonComponent, IconComponent } from '@academy/shared';
   imports: [MainLayoutComponent, ButtonComponent, IconComponent],
 })
 export class MainPageComponent {
+  private readonly dialogService = inject(DialogService);
+
   @ViewChild('about')
   public aboutSection!: ElementRef;
 
@@ -21,6 +25,15 @@ export class MainPageComponent {
     this.aboutSection.nativeElement.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
+    });
+  }
+
+  public sendRequest(): void {
+    this.dialogService.open(RequestFormComponent, {
+      data: {
+        title: 'Оставить заявку',
+        width: '800px',
+      },
     });
   }
 }
